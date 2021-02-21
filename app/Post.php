@@ -16,13 +16,13 @@ class Post extends Model
     {
         return [
             'slug' => [
-                'source' => 'title'
+                'source' => 'title',
                 'onUpdate' => true
             ]
         ];
     }
     public function user()
-    public function post(){
+    {
         return $this->belongsTo(User::class);
     }
 }
